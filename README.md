@@ -1,7 +1,7 @@
 # Readme
 
 ## Description
-This project is about a backend-type project for Jadist. Created to be run on Firebase Serverless Function. And only be used for Jadist of Sales project only. That consist about, but not limited to:
+This project is a backend-type project of Jadist. Created to be run on Firebase Serverless Function. And only be used for Jadist of Sales project only. That consist of, but not limited to:
 - Quotation
 - Purchase Order
 - Sales Invoice
