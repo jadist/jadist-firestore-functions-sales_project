@@ -13,5 +13,5 @@ This project is a backend-type project of Jadist. Created to be run on Firebase 
 - Cash Registration
 - Closing
 
-# DELETE THIS BRANCH
-# Forget to add the key
+# Note
+This is being modified to be used for Jira-Github connection
