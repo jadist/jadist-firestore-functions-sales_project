@@ -1,13 +1,27 @@
-// import * as functions from "firebase-functions";
+import * as glob from "glob";
 
-// // Start writing functions
-// // https://firebase.google.com/docs/functions/typescript
+class DynamicExport {
+  runThis() {
+    const files = glob.sync("./**/*.f.js", {
+      cwd: __dirname,
+      ignore: "../node_modules/**",
+    });
 
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs! - by EAP", { structuredData: true });
-//   response.send("Hello from Firebase! - by EAP");
-// });
+    for (let f = 0, fl = files.length; f < fl; f++) {
+      const file = files[f];
+      const functionName = this.camelCase(file);
 
-import { onView } from "./temp/onView";
+      exports[functionName] = require(file);
+    }
+  }
 
-export const helloWorld = onView;
+  private camelCase(file: string): string {
+    console.log(file);
+    const result = file.slice(0, -5).split("/").join("").replace(".", "");
+    console.log(result);
+
+    return result;
+  }
+}
+
+new DynamicExport().runThis();
