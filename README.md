@@ -12,3 +12,6 @@ This project is a backend-type project of Jadist. Created to be run on Firebase 
 - Received Note
 - Cash Registration
 - Closing
+
+# DELETE THIS BRANCH
+# Forget to add the key
