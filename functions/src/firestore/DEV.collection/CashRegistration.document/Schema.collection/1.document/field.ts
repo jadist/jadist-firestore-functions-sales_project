@@ -1,4 +1,4 @@
-export interface field {
+interface field {
   AsAdminNotes: string;
   AsAdminUserFullNameRef: string;
   AsAdminUserReference: {
@@ -16,3 +16,5 @@ export interface field {
   ModifiedDateTime: Date;
   _SchemaVersion: number;
 }
+
+export default field;
