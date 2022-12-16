@@ -1,4 +1,4 @@
-export interface field {
+interface field {
   AsConsumerUserAddressRef: string;
   AsConsumerUserFullNameRef: string;
   AsConsumerUserReference: {
@@ -9,3 +9,5 @@ export interface field {
   ModifiedDateTime: Date;
   _SchemaVersion: number;
 }
+
+export default field;

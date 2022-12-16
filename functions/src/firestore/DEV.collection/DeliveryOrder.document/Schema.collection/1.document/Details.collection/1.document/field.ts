@@ -1,4 +1,4 @@
-export interface field {
+interface field {
   CreatedDateTime: string;
   ItemQuantityRef: number;
   ModifiedDateTime: Date;
@@ -9,3 +9,5 @@ export interface field {
   };
   _SchemaVersion: number;
 }
+
+export default field;
