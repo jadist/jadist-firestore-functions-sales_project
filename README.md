@@ -14,4 +14,5 @@ This project is a backend-type project of Jadist. Created to be run on Firebase 
 - Closing
 
 # Note
-This is being modified to be used for Jira-Github connection
+- This is being modified to be used for Jira-Github connection
+- Try to merge from Main to branch
