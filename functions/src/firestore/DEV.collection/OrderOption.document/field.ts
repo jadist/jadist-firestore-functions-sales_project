@@ -1,9 +1,10 @@
 import { FirstLevelDocumentModel } from "../../model/FirstLevelDocument.model";
+import { DocumentTypeEnum } from "../../text/DocumentType.enum";
 
 const field: FirstLevelDocumentModel = {
   _DocumentIdentifier: "$ORDER_OPTION",
   _DocumentType: {
-    reference: "DEV/DocumentType/Records/SYSTEM_TRANSACTION",
+    reference: DocumentTypeEnum.SYSTEM_TRANSACTION,
   },
 };
 
