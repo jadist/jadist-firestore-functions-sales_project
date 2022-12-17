@@ -1,15 +1,12 @@
+import { FirestoreReference } from "../../../model/Firestore.model";
 interface field {
   AccessTypeReference: {
     reference: string;
   };
   CreatedDateTime?: Date;
-  DocumentIdentifierReference: {
-    reference: string;
-  };
+  DocumentIdentifierReference: FirestoreReference;
   ModifiedDateTime?: Date;
-  ProfileReference: {
-    reference: string;
-  };
+  ProfileReference: FirestoreReference;
   _AccessSchemaVersion: number;
 }
 

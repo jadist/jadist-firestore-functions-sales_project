@@ -1,14 +1,11 @@
+import { FirestoreReference } from "../../../../model/Firestore.model";
 interface field {
   AsAdminNotes: string;
   AsAdminUserFullNameRef: string;
-  AsAdminUserReference: {
-    reference: string;
-  };
+  AsAdminUserReference: FirestoreReference;
   AsDeliveryManNotes: string;
   AsDeliveryManUserFullNameRef: string;
-  AsDeliveryManUserReference: {
-    reference: string;
-  };
+  AsDeliveryManUserReference: FirestoreReference;
   CashAmount: number;
   CashRegistrationNo: string;
   CashRegistrationNotes: string;

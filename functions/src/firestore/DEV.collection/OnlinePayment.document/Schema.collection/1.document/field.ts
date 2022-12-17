@@ -1,15 +1,12 @@
+import { FirestoreReference } from "../../../../model/Firestore.model";
 interface field {
   CreatedDateTime: Date;
   ModifiedDateTime: Date;
   PaymentMethodNameref: string;
-  PaymentMethodReference: {
-    reference: string;
-  };
+  PaymentMethodReference: FirestoreReference;
   PaymentNotes: string;
   PaymentProfiderNameref: string;
-  PaymentProviderReference: {
-    reference: string;
-  };
+  PaymentProviderReference: FirestoreReference;
   PaymentReferenceNo: string;
   _SchemaVersion: number;
 }

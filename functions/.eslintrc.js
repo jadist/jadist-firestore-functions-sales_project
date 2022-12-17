@@ -31,5 +31,6 @@ module.exports = {
     "object-curly-spacing": [2, "always"],
     "require-jsdoc": 0,
     "indent": ["error", 2, { "SwitchCase": 1 }],
+    "max-len": ["error", { "code": 120 }],
   },
 };

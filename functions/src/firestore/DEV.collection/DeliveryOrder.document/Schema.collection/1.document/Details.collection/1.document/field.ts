@@ -1,12 +1,11 @@
+import { FirestoreReference } from "../../../../../../model/Firestore.model";
 interface field {
   CreatedDateTime: string;
   ItemQuantityRef: number;
   ModifiedDateTime: Date;
   ProductDescriptionRef: string;
   ProductSKURef: string;
-  QuotationDetailsReference: {
-    reference: string;
-  };
+  QuotationDetailsReference: FirestoreReference;
   _SchemaVersion: number;
 }
 
