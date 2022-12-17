@@ -16,6 +16,7 @@ const field: schema.default = {
     DocumentIdentifierEnum.ReceivedNotes,
     DocumentIdentifierEnum.CashCollections,
     DocumentIdentifierEnum.CashRegistration,
+    DocumentIdentifierEnum.SalesClosure,
   ],
   _SchemaVersion: 1,
 };

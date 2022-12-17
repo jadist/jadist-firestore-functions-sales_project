@@ -14,8 +14,9 @@ export enum TransactionNoInitialEnum {
   Quotation = "QT",
   ReceivedNotes = "RN",
   Sales = "SL",
+  SalesClosure = "SR",
   SalesInvoice = "SI",
   SalesOrder = "SO",
   ShoppingCart = "SC",
-  Users = "US"
+  Users = "US",
 }

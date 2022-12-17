@@ -14,8 +14,9 @@ export enum DocumentIdentifierEnum {
   Quotation = "$QUOTATION",
   ReceivedNotes = "$RECEIVED_NOTES",
   Sales = "$SALES",
+  SalesClosure = "$SALES_CLOSURE",
   SalesInvoice = "$SALES_INVOICE",
   SalesOrder = "$SALES_ORDER",
   ShoppingCart = "$SHOPPING_CART",
-  Users = "$USERS"
+  Users = "$USERS",
 }

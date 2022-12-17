@@ -16,7 +16,8 @@ interface field {
     DocumentIdentifierEnum.SalesInvoice,
     DocumentIdentifierEnum.ReceivedNotes,
     DocumentIdentifierEnum.CashCollections,
-    DocumentIdentifierEnum.CashRegistration
+    DocumentIdentifierEnum.CashRegistration,
+    DocumentIdentifierEnum.SalesClosure
   ];
   TransactionsReference?: FirestoreReference[];
   _SchemaVersion: number;
