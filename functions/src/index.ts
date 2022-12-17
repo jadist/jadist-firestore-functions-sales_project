@@ -1,5 +1,9 @@
 import * as glob from "glob";
 
+import { initializeApp } from "firebase-admin/app";
+
+initializeApp();
+
 class DynamicExport {
   runThis() {
     const files = glob.sync("./**/*.f.js", {
