@@ -1,12 +1,11 @@
-import { FirestoreReference } from "../../../../model/Firestore.model";
+import * as schema from "../../Schema.collection/1.document/field";
 import { DocumentIdentifierEnum } from "../../../../text/FirstLevelDocument/DocumentIdentifierEnum";
 
-interface field {
-  CreatedDateTime?: Date[];
-  ModifiedDateTime?: Date[];
-  OrderOptionsReference?: FirestoreReference;
-  SalesNo: string;
-  TransactionsDescription?: string[];
+const field: schema.default = {
+  OrderOptionsReference: {
+    reference: "",
+  },
+  SalesNo: "",
   TransactionsExecutionOrder: [
     DocumentIdentifierEnum.Quotation,
     DocumentIdentifierEnum.PurchaseOrder,
@@ -16,10 +15,9 @@ interface field {
     DocumentIdentifierEnum.SalesInvoice,
     DocumentIdentifierEnum.ReceivedNotes,
     DocumentIdentifierEnum.CashCollections,
-    DocumentIdentifierEnum.CashRegistration
-  ];
-  TransactionsReference?: FirestoreReference[];
-  _SchemaVersion: number;
-}
+    DocumentIdentifierEnum.CashRegistration,
+  ],
+  _SchemaVersion: 1,
+};
 
 export default field;
