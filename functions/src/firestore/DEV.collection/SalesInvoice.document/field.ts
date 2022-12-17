@@ -1,9 +1,11 @@
 import { FirstLevelDocumentModel } from "../../model/FirstLevelDocument.model";
-import { DocumentTypeEnum } from "../../text/DocumentType.enum";
+import { DocumentTypeEnum } from "../../text/FirstLevelDocument/DocumentTypeEnum";
+import { TransactionNoInitialEnum } from "../../text/FirstLevelDocument/TransactionNoInitialEnum";
+import { DocumentIdentifierEnum } from "../../text/FirstLevelDocument/DocumentIdentifierEnum";
 
 const field: FirstLevelDocumentModel = {
-  TransactionNoInitial: "SI",
-  _DocumentIdentifier: "$SALES_INVOICE",
+  TransactionNoInitial: TransactionNoInitialEnum.SalesInvoice,
+  _DocumentIdentifier: DocumentIdentifierEnum.SalesInvoice,
   _DocumentType: {
     reference: DocumentTypeEnum.TRANSACTION,
   },

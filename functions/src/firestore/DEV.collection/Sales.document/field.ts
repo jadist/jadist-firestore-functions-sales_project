@@ -4,10 +4,10 @@ import { TransactionNoInitialEnum } from "../../text/FirstLevelDocument/Transact
 import { DocumentIdentifierEnum } from "../../text/FirstLevelDocument/DocumentIdentifierEnum";
 
 const field: FirstLevelDocumentModel = {
-  TransactionNoInitial: TransactionNoInitialEnum.CashCollections,
-  _DocumentIdentifier: DocumentIdentifierEnum.CashCollections,
+  TransactionNoInitial: TransactionNoInitialEnum.Sales,
+  _DocumentIdentifier: DocumentIdentifierEnum.Sales,
   _DocumentType: {
-    reference: DocumentTypeEnum.TRANSACTION,
+    reference: DocumentTypeEnum.TRANSACTION_CHAIN,
   },
 };
 

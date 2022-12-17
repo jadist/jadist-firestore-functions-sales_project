@@ -2,12 +2,10 @@ import * as schema from "../../Schema.collection/1.document/field";
 
 const field: schema.default = {
   UserAccess: {
-    map: {
-      Create: true,
-      Delete: true,
-      Read: true,
-      Update: true,
-    },
+    Create: true,
+    Delete: true,
+    Read: true,
+    Update: true,
   },
   _SchemaVersion: 1,
 };

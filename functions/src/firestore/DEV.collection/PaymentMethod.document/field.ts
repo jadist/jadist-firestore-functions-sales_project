@@ -1,8 +1,9 @@
 import { FirstLevelDocumentModel } from "../../model/FirstLevelDocument.model";
-import { DocumentTypeEnum } from "../../text/DocumentType.enum";
+import { DocumentTypeEnum } from "../../text/FirstLevelDocument/DocumentTypeEnum";
+import { DocumentIdentifierEnum } from "../../text/FirstLevelDocument/DocumentIdentifierEnum";
 
 const field: FirstLevelDocumentModel = {
-  _DocumentIdentifier: "$PAYMENT_METHOD",
+  _DocumentIdentifier: DocumentIdentifierEnum.PaymentMethod,
   _DocumentType: {
     reference: DocumentTypeEnum.SYSTEM_MASTER,
   },
