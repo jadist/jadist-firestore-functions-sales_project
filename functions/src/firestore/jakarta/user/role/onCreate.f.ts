@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import * as userRoleModel from "./userRole.model";
+import * as ur from "./userRole.model";
 
 /**
  * @name OnUserRoleCreate
@@ -8,11 +8,11 @@ import * as userRoleModel from "./userRole.model";
 module.exports = functions
   .region("asia-southeast2")
   .https.onRequest((request, response) => {
-    userRoleModel.UserRoleSystemData["USER-ROLE"].forEach((item) => {
+    ur.UserRoleSystemData[ur.UserRoleCollectionName].forEach((item) => {
       Object.keys(item).forEach((itemKey) => {
         admin
           .firestore()
-          .collection("USER-ROLE")
+          .collection(ur.UserRoleCollectionName)
           .doc(itemKey)
           .set(item[itemKey])
           .then()

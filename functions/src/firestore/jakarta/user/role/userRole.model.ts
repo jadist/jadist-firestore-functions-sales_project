@@ -1,8 +1,10 @@
+export const UserRoleCollectionName = "USER-ROLE";
+
 export interface UserRoleModel {
   version?: {
     "1": never;
   };
-  "USER-ROLE": {
+  [UserRoleCollectionName]: {
     [key: string]: {
       UniqueCode: string;
       RoleName: string;
@@ -17,7 +19,7 @@ export interface UserRoleModel {
  * Of which has length of 20 char
  */
 export const UserRoleSystemData: UserRoleModel = {
-  "USER-ROLE": [
+  [UserRoleCollectionName]: [
     {
       UserRoleRandomKey001: {
         UniqueCode: "SALES",
