@@ -1,7 +1,7 @@
 export const UserRoleCollectionName = "USER-ROLE";
 
 export interface UserRoleModel {
-  version?: {
+  Version?: {
     "1": never;
   };
   [UserRoleCollectionName]: {
@@ -9,6 +9,7 @@ export interface UserRoleModel {
       UniqueCode: string;
       RoleName: string;
       RoleDescription: string;
+      DocVersion: string;
     };
   }[];
 }
@@ -25,6 +26,7 @@ export const UserRoleSystemData: UserRoleModel = {
         UniqueCode: "SALES",
         RoleName: "Salesperson",
         RoleDescription: "Daily Salesperson",
+        DocVersion: "1",
       },
     },
     {
@@ -32,6 +34,7 @@ export const UserRoleSystemData: UserRoleModel = {
         UniqueCode: "CONSUMER",
         RoleName: "Consumer",
         RoleDescription: "Someone who use Jadist services",
+        DocVersion: "1",
       },
     },
     {
@@ -39,6 +42,7 @@ export const UserRoleSystemData: UserRoleModel = {
         UniqueCode: "ADMIN-OF-SALES",
         RoleName: "Admin of Sales",
         RoleDescription: "Someone who manage Jadist's Consumer",
+        DocVersion: "1",
       },
     },
     {
@@ -47,6 +51,7 @@ export const UserRoleSystemData: UserRoleModel = {
         RoleName: "Delivery Man",
         RoleDescription:
           "Someone who responsible of delivering Jadist's products",
+        DocVersion: "1",
       },
     },
     {
@@ -55,6 +60,7 @@ export const UserRoleSystemData: UserRoleModel = {
         RoleName: "Admin of Finance",
         RoleDescription:
           "Someone who responsible of managing Cash Registration",
+        DocVersion: "1",
       },
     },
   ],
