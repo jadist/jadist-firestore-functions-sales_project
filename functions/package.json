@@ -17,7 +17,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "@types/glob": "^8.0.0",
-    "firebase-admin": "^10.0.2",
+    "firebase-admin": "^11.4.1",
     "firebase-functions": "^3.18.0",
     "glob": "^8.0.3"
   },
