@@ -9,7 +9,7 @@ module.exports = functions
       .collection("DELETE-ME-Collection")
       .doc("DELETE-ME-Document")
       .create({ name: "value" })
-      .then((result) => {
+      .then(() => {
         functions.logger.info(
           "Try to write to firestore from functions - by EAP",
           { structuredData: true }
