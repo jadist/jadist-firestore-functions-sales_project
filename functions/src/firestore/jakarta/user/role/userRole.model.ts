@@ -1,6 +1,6 @@
 export interface UserRoleModel {
   version?: {
-    "1": any;
+    "1": never;
   };
   "USER-ROLE": {
     [key: string]: {
