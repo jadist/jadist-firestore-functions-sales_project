@@ -1,16 +1,18 @@
 export const UserRoleCollectionName = "USER-ROLE";
 
+export interface UserRoleDocumentModel {
+  UniqueCode: string;
+  RoleName: string;
+  RoleDescription: string;
+  DocVersion: string;
+}
+
 export interface UserRoleModel {
   Version?: {
     "1": never;
   };
   [UserRoleCollectionName]: {
-    [key: string]: {
-      UniqueCode: string;
-      RoleName: string;
-      RoleDescription: string;
-      DocVersion: string;
-    };
+    [key: string]: UserRoleDocumentModel;
   }[];
 }
 
