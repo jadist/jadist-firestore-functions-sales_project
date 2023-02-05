@@ -1,4 +1,7 @@
 import * as glob from "glob";
+import * as admin from "firebase-admin";
+
+admin.initializeApp();
 
 class DynamicExport {
   runThis() {

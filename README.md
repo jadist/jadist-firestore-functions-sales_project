@@ -12,3 +12,7 @@ This project is a backend-type project of Jadist. Created to be run on Firebase 
 - Received Note
 - Cash Registration
 - Closing
+
+# Note
+- This is being modified to be used for Jira-Github connection
+- Try to merge from Main to branch
