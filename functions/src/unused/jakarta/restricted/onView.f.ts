@@ -1,20 +1,19 @@
 import * as functions from "firebase-functions";
-import * as admin from "firebase-admin";
+import * as validation from "../../../helper/auth/firebase-validation";
 
 module.exports = functions
   .region("asia-southeast2")
   .https.onRequest(async (request, response) => {
-    const tokenId = String(request.headers.authorization?.split("Bearer ")[1]);
+    const jwt = String(request.headers.authorization?.split("Bearer ")[1]);
 
-    admin
-      .auth()
-      .verifyIdToken(tokenId)
-      .then((decoded) => {
-        return response.status(200).send(decoded);
-      })
-      .catch((err) => {
-        return response.status(401).send(err);
-      });
+    const result = await validation.validate(jwt);
 
-    // response.send("Hello from restricted resources. token: " + tokenId);
+    if (result.IsTrue) {
+      response.send("OKE");
+    } else {
+      response
+        .status(401)
+        .contentType("application/json")
+        .send(JSON.stringify(result));
+    }
   });

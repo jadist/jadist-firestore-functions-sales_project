@@ -19,7 +19,8 @@
     "@types/glob": "^8.0.0",
     "firebase-admin": "^11.4.1",
     "firebase-functions": "^4.1.1",
-    "glob": "^8.0.3"
+    "glob": "^8.0.3",
+    "jose": "^4.11.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.12.0",
