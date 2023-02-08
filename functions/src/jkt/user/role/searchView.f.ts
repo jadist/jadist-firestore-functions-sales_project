@@ -1,10 +1,22 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import * as ur from "./userRole.model";
+import * as validation from "../../../helper/auth/firebase-validation";
 
 module.exports = functions
   .region("asia-southeast2")
   .https.onRequest(async (request, response) => {
+    const jwt = String(request.headers.authorization?.split("Bearer ")[1]);
+
+    const result = await validation.validate(jwt);
+
+    if (!result.IsTrue) {
+      response
+        .status(401)
+        .contentType("application/json")
+        .send(JSON.stringify(result));
+    }
+
     const filterString = String(request.query["search"]).toLowerCase();
 
     const docs = admin.firestore().collection(ur.UserRoleCollectionName);
