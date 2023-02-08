@@ -8,9 +8,7 @@ module.exports = functions
 
     const result = await validation.validate(jwt);
 
-    if (result.IsTrue) {
-      response.send("OKE");
-    } else {
+    if (!result.IsTrue) {
       response
         .status(401)
         .contentType("application/json")
