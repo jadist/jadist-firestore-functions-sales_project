@@ -14,4 +14,8 @@ module.exports = functions
         .contentType("application/json")
         .send(JSON.stringify(result));
     }
+
+    response
+      .contentType("application/json")
+      .send(JSON.stringify({ message: "OKE" }));
   });
