@@ -1,15 +1,12 @@
+/* eslint-disable max-len */
 import * as ul from "../../user/list/model";
 import { AccessObjectEnum } from "../object/enum";
 
 export const RoleAccessMapCollectionName = "ROLE-ACCESS-MAP";
 
 export interface RoleAccessMapDocumentModel {
-  UserRoleReference: {
-    Path: string;
-  };
-  AccessObjectReference: {
-    Path: string;
-  };
+  UserRoleReference: string;
+  AccessObjectReference: string;
   Create: boolean;
   Read: boolean;
   Update: boolean;
@@ -35,12 +32,8 @@ export const RoleAccessMapSystemData: RoleAccessMapModel = {
   [RoleAccessMapCollectionName]: [
     {
       RoleAccessMapKey1IsUserRole: {
-        UserRoleReference: {
-          Path: `${ul.UserListCollectionName}/${ul.UserListSuperAdminKey}`,
-        },
-        AccessObjectReference: {
-          Path: `${AccessObjectEnum.AccessObjectKey1IsUserRole}`,
-        },
+        UserRoleReference: `${ul.UserListCollectionName}/${ul.UserListSuperAdminKey}`,
+        AccessObjectReference: `${ul.UserListCollectionName}/${ul.UserListSuperAdminKey}`,
         Create: true,
         Read: true,
         Update: true,
@@ -50,12 +43,8 @@ export const RoleAccessMapSystemData: RoleAccessMapModel = {
     },
     {
       RoleAccessMapKey2IsUserList: {
-        UserRoleReference: {
-          Path: `${ul.UserListCollectionName}/${ul.UserListSuperAdminKey}`,
-        },
-        AccessObjectReference: {
-          Path: `${AccessObjectEnum.AccessObjectKey2IsUserList}`,
-        },
+        UserRoleReference: `${ul.UserListCollectionName}/${ul.UserListSuperAdminKey}`,
+        AccessObjectReference: `${AccessObjectEnum.AccessObjectKey2IsUserList}`,
         Create: true,
         Read: true,
         Update: true,
@@ -65,12 +54,8 @@ export const RoleAccessMapSystemData: RoleAccessMapModel = {
     },
     {
       RoleAccessMapKey3IsAccessObject: {
-        UserRoleReference: {
-          Path: `${ul.UserListCollectionName}/${ul.UserListSuperAdminKey}`,
-        },
-        AccessObjectReference: {
-          Path: `${AccessObjectEnum.AccessObjectKey3IsAccessObject}`,
-        },
+        UserRoleReference: `${ul.UserListCollectionName}/${ul.UserListSuperAdminKey}`,
+        AccessObjectReference: `${AccessObjectEnum.AccessObjectKey3IsAccessObject}`,
         Create: true,
         Read: true,
         Update: true,

@@ -3,10 +3,7 @@ export const UserListCollectionName = "USER-LIST";
 export const UserListSuperAdminKey = "UserListSuperAdminKey";
 
 export interface UserListDocumentModel {
-  UserRoleReference: {
-    Reference?: true;
-    Path: string;
-  };
+  UserRoleReference: string;
   Username: string;
   EmailAddress: string;
   FullName: string;
@@ -33,9 +30,7 @@ export const UserRoleSystemData: UserTypeModel = {
     {
       [UserListSuperAdminKey]: {
         // eslint-disable-next-line max-len
-        UserRoleReference: {
-          Path: `/${ur.UserRoleCollectionName}/${ur.UserRoleSuperAdminKey}`,
-        },
+        UserRoleReference: `/${ur.UserRoleCollectionName}/${ur.UserRoleSuperAdminKey}`,
         Username: "sa",
         EmailAddress: "",
         FullName: "Super Admin",
