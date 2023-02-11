@@ -1,4 +1,4 @@
-import * as ul from "../../user/list/userList.model";
+import * as ul from "../../user/list/model";
 import { AccessObjectEnum } from "../object/enum";
 
 export const RoleAccessMapCollectionName = "ROLE-ACCESS-MAP";

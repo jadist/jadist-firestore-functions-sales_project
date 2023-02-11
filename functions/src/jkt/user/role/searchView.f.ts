@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import * as ur from "./userRole.model";
+import * as ur from "./model";
 import * as validation from "../../../helper/auth/firebase-validation";
 
 import * as corsModule from "cors";

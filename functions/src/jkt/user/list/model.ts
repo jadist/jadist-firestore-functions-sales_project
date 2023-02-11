@@ -1,4 +1,4 @@
-import * as ur from "../role/userRole.model";
+import * as ur from "../role/model";
 export const UserListCollectionName = "USER-LIST";
 export const UserListSuperAdminKey = "UserListSuperAdminKey";
 

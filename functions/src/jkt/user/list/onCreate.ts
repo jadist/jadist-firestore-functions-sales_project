@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import * as ul from "./userList.model";
+import * as ul from "./model";
 
 /**
  * Inital call of the module will create Super Admin User

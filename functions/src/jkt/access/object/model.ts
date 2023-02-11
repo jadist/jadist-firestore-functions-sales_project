@@ -1,5 +1,5 @@
-import * as ur from "../../user/role/userRole.model";
-import * as ul from "../../user/list/userList.model";
+import * as ur from "../../user/role/model";
+import * as ul from "../../user/list/model";
 
 import { AccessObjectEnum } from "./enum";
 
