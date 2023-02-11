@@ -1,5 +1,6 @@
 import * as ur from "../role/userRole.model";
 export const UserListCollectionName = "USER-LIST";
+export const UserListSuperAdminKey = "UserListSuperAdminKey";
 
 export interface UserListDocumentModel {
   UserRoleReference: {
@@ -30,7 +31,7 @@ export interface UserTypeModel {
 export const UserRoleSystemData: UserTypeModel = {
   [UserListCollectionName]: [
     {
-      SuperAdminUserKey: {
+      [UserListSuperAdminKey]: {
         // eslint-disable-next-line max-len
         UserRoleReference: {
           Path: `/${ur.UserRoleCollectionName}/${ur.UserRoleSuperAdminKey}`,

@@ -1,6 +1,8 @@
 import * as ur from "../../user/role/userRole.model";
 import * as ul from "../../user/list/userList.model";
 
+import { AccessObjectEnum } from "./enum";
+
 export const AccessObjectCollectionName = "ACCESS-OBJECT";
 
 export interface AccessObjectDocumentModel {
@@ -20,13 +22,14 @@ export interface AccessObjectModel {
 }
 
 /**
- * This module will populate:
- * 1. Master Data
+ * Collection Name use CAPITAL, for System Data
+ * Document No use Random String data, of Firebase Firestore random string
+ * Of which has length of 20 char
  */
 export const AccessObjectSystemData: AccessObjectModel = {
   [AccessObjectCollectionName]: [
     {
-      AccessObjectKey1IsUserRole: {
+      [AccessObjectEnum.AccessObjectKey1IsUserRole]: {
         AccessCode: ur.UserRoleCollectionName,
         ObjectName: "User Role",
         ObjectDescription: "User Role Object",
@@ -34,7 +37,7 @@ export const AccessObjectSystemData: AccessObjectModel = {
       },
     },
     {
-      AccessObjectKey2IsUserList: {
+      [AccessObjectEnum.AccessObjectKey2IsUserList]: {
         AccessCode: ul.UserListCollectionName,
         ObjectName: "User List",
         ObjectDescription: "User List Object",
@@ -42,7 +45,7 @@ export const AccessObjectSystemData: AccessObjectModel = {
       },
     },
     {
-      AccessObjectKey3IsAccessObject: {
+      [AccessObjectEnum.AccessObjectKey3IsAccessObject]: {
         AccessCode: AccessObjectCollectionName,
         ObjectName: "Access Object",
         ObjectDescription: "Access Object, Object",

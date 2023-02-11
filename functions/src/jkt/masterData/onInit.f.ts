@@ -7,6 +7,7 @@ import * as validation from "../../helper/auth/firebase-validation";
 import userRoleCreate from "../user/role/onCreate";
 import userListCreate from "../user/list/onCreate";
 import accessObjectCreate from "../access/object/onCreate";
+import roleAccessMapCreate from "../access/map/onCreate";
 
 /**
  * Function to generate Master Data
@@ -34,6 +35,9 @@ module.exports = functions
 
       // Access Object
       accessObjectCreate();
+
+      // Role Access Map
+      roleAccessMapCreate();
 
       response.contentType("application/json").send(
         JSON.stringify({
