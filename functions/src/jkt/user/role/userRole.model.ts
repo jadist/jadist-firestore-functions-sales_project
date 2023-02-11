@@ -1,4 +1,5 @@
 export const UserRoleCollectionName = "USER-ROLE";
+export const UserRoleSuperAdminKey = "UserRoleSuperAdminKey";
 
 export interface UserRoleDocumentModel {
   UniqueCode: string;
@@ -23,6 +24,14 @@ export interface UserRoleModel {
  */
 export const UserRoleSystemData: UserRoleModel = {
   [UserRoleCollectionName]: [
+    {
+      [UserRoleSuperAdminKey]: {
+        UniqueCode: "SUPER-ADMIN",
+        RoleName: "Super Admin",
+        RoleDescription: "Super Admin Role",
+        DocVersion: "1",
+      },
+    },
     {
       UserRoleRandomKey001: {
         UniqueCode: "SALES",
