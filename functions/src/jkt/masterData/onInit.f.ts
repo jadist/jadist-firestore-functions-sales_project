@@ -6,6 +6,7 @@ import * as validation from "../../helper/auth/firebase-validation";
 
 import userRoleCreate from "../user/role/onCreate";
 import userListCreate from "../user/list/onCreate";
+import accessObjectCreate from "../access/object/onCreate";
 
 /**
  * Function to generate Master Data
@@ -31,6 +32,13 @@ module.exports = functions
       // Create Initial User List
       userListCreate();
 
-      response.send("Module has been called!");
+      // Access Object
+      accessObjectCreate();
+
+      response.contentType("application/json").send(
+        JSON.stringify({
+          message: "Module has been called successfully",
+        })
+      );
     });
   });
