@@ -1,17 +1,17 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import * as ul from "./userList.model";
+import * as ao from "./accessObject.model";
 
 /**
  * Inital call of the module will create Super Admin User
- * @name OnUserListCreate
+ * @name OnAccessObjectCreate
  */
 export default function () {
-  ul.UserRoleSystemData[ul.UserListCollectionName].forEach((item) => {
+  ao.AccessObjectSystemData[ao.AccessObjectCollectionName].forEach((item) => {
     Object.keys(item).forEach((itemKey) => {
       admin
         .firestore()
-        .collection(ul.UserListCollectionName)
+        .collection(ao.AccessObjectCollectionName)
         .doc(itemKey)
         .set(item[itemKey])
         .then()
